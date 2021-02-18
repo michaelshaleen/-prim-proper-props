@@ -5,6 +5,7 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import GuestList from '../GuestList/GuestList'
 import DinnerSupplies from '../DinnerSupplies/DinnerSupplies'
+
 function App() {
   let [guestList, setGuestList] = useState([]);
   let [newGuestName, setNewGuestName] = useState('');
@@ -119,7 +120,9 @@ function App() {
           ))}
         </tbody>
       </table>
-      <DinnerSupplies />
+      <DinnerSupplies 
+      guestList={guestList}
+      />
      
       <Footer />
 
